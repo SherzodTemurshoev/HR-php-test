@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::get('/order', 'OrderProduct@index')->name('orders.index');
 //Редактирования заказа
+Route::get('/order/{id}/edit', 'OrderProduct@edit')->name('orders.edit');
+Route::get('/order/{id}', 'OrderProduct@update')->name('orders.update');

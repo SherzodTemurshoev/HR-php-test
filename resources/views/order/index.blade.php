@@ -15,7 +15,7 @@
 		<tbody>
 			@foreach ($query as $order)
 				<tr>
-					<td>{{ $order->id }}</td>
+					<td><a href="{{ route('orders.edit', $order->id) }}" target="_blank">{{ $order->id }}</a></td>
 					<td>{{ $order->name }}</td>
 					<td>{{ $order->price }}</td>
 					<td>{{ $order->status }}</td>
