@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/order', 'OrderProduct@index')->name('orders.index');
+//Редактирования заказа
