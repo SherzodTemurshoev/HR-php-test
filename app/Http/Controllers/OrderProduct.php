@@ -45,4 +45,24 @@ class OrderProduct extends Controller
 
     	return redirect()->route('orders.index');
     }
+
+    public function weather()
+    {
+    	$url = 'http://api.openweathermap.org/data/2.5/weather';
+    	$data_for_weather = array(
+    		'q'		=>	'Bryansk',
+    		'appid'	=>	'056240e494854ba051549bbc4508ecbc',
+    		'lang'	=>	'ru',
+    	);
+
+    	$ch = curl_init();
+    	curl_setopt($ch, CURLOPT_RETURNTRANSFER , 1);
+    	curl_setopt($ch, CURLOPT_URL , $url.'?'.http_build_query($data_for_weather));
+
+    	$response = curl_exec($ch);
+    	$data = json_decode($response, true);
+    	curl_close($ch);
+    	return view('order.weather', compact('data'));
+    }
+
 }

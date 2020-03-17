@@ -14,8 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//	Страница с информацией о погоде
+Route::get('/order/weather', 'OrderProduct@weather')->name('orders.weather');
 
 Route::get('/order', 'OrderProduct@index')->name('orders.index');
-//Редактирования заказа
+//	Редактирования заказа
 Route::get('/order/{id}/edit', 'OrderProduct@edit')->name('orders.edit');
 Route::get('/order/{id}', 'OrderProduct@update')->name('orders.update');
+
+
