@@ -7,3 +7,31 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+html, body {
+	background-color: #fff;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: 'Trebuchet MS', 'MS Sans Serif', sans-serif;
+}
+.main-div {
+	display: flex;
+	margin: 20px 0;
+	justify-content: center;
+}
+.main-div table {
+	border-collapse: collapse;
+}
+.main-div table, .main-div th, .main-div td {
+	border: 1px solid black;
+	padding: 10px;
+}
+.main-div th {
+	background-color: #1773c8;
+}
+.main-div tr:nth-child(even) {
+	background-color: #ced6eb;
+}
+.main-div tr:nth-child(odd) {
+	background-color: #e9ebf7;
+}

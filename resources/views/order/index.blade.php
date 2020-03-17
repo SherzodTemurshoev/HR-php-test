@@ -3,7 +3,7 @@
 @section('title', 'Order table')
 
 @section('content')
-	<table border = "1">
+	<table>
 		<thead>
 			<tr>
 				<th>ид_заказа</th>
@@ -15,7 +15,7 @@
 		<tbody>
 			@foreach ($query as $order)
 				<tr>
-					<td><a href="{{ route('orders.edit', $order->id) }}" target="_blank">{{ $order->id }}</a></td>
+					<td><a href="{{ route('orders.edit', $order->id) }}" target="_blank" title="редактировать">{{ $order->id }}</a></td>
 					<td>{{ $order->name }}</td>
 					<td>{{ $order->price }}</td>
 					<td>{{ $order->status }}</td>
